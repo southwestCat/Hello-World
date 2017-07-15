@@ -27,6 +27,8 @@ u8 rlen;
 
 int car_func_mode,car_func_data;
 
+void git_test(void);
+
 void Periph_Init()
 {
 	delay_init();
@@ -201,8 +203,18 @@ int main(void)
 				LCD_Clear(WHITE);
 				break;
 			}
+			case 9:
+			{
+				git_test();
+			}
 			default: { car_func_mode=0; car_func_data=0; break; }
 		}
 	}
 } 
+
+void git_test()
+{
+	printf("this is work branch!");
+}
+
 
